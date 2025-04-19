@@ -51,4 +51,4 @@ divideetimpera
 ```
 
 📸 _Screenshot of terminal output_  
-![Caesar Cipher Output](../screenshots/output.png)
+![Caesar Cipher Output](./screenshots/output.png)
