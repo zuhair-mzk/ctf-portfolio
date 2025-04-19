@@ -20,4 +20,35 @@ This challenge involved implementing the **Caesar cipher**, a classic cryptograp
 
 ## 🧪 Sample Test
 
-### Input (`plaintext.txt`)
+### 📄 Input File: [`plaintext.txt`](./plaintext.txt)
+
+```
+divideetimpera
+```
+
+### 🔐 Encrypted Output (key = 4)
+
+```
+hmzmhiixmqtive
+```
+
+### 🔓 Decrypted Output
+
+```
+divideetimpera
+```
+
+---
+
+## 🖥️ Terminal Run Example
+
+```bash
+$ ./run.sh encrypt 4 plaintext.txt
+hmzmhiixmqtive
+
+$ ./run.sh decrypt 4 ciphertext.txt
+divideetimpera
+```
+
+📸 _Screenshot of terminal output_  
+![Caesar Cipher Output](../screenshots/output.png)
