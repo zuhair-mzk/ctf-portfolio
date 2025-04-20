@@ -1,43 +1,43 @@
 # 🛡️ Cybersecurity CTF Portfolio – Zuhair Khan
 
-Welcome! This private repository documents my solutions, approaches, and reflections on a series of Capture the Flag (CTF) challenges completed as part of my coursework in **Intro to Cybersecurity** at the University of Toronto (CSCD27F24).
+Welcome! This portfolio documents my solutions, approaches, and reflections on a series of Capture the Flag (CTF) challenges completed as part of **Intro to Cybersecurity (CSCD27F24)** at the University of Toronto.
 
-These challenges span a range of topics:
+These challenges span a wide range of cybersecurity topics:
 
-- 🔐 Cryptography (e.g. Caesar Cipher, AES, GPG)
+- 🔐 Cryptography (e.g. Caesar Cipher, XOR + Base64, AES, GPG)
 - 🕵️‍♂️ Packet analysis and ARP spoofing
-- 💻 Reverse engineering & encoding tricks
-- 🌐 Web security and TLS simulation
+- 💻 Reverse engineering and encoding tricks
+- 🌐 Web security, TLS simulation, and attacks
 
-Each challenge includes a short description of the problem, my thought process, partial or redacted code, and sample outputs where appropriate.
+Each challenge folder contains a brief write-up, sample I/O files, redacted code, and test results where appropriate.
 
 ---
 
 ## ⚠️ Disclaimer
 
-> This portfolio is intended **solely for educational and professional review purposes**.  
-> It is **not affiliated with or licensed by the University of Toronto**, and no official materials are distributed.  
-> Please do **not redistribute**, publish, or share this content publicly.  
+> This repository is intended **solely for educational and professional review purposes**.  
+> It is **not affiliated with or licensed by the University of Toronto**, and no official course materials are distributed.  
+> Please do **not redistribute, publish, or reuse** any content without explicit permission.  
 > Code has been selectively redacted or obfuscated to preserve academic integrity.
 
-If you're a recruiter, instructor, or industry professional and would like to discuss this work further, feel free to contact me directly:  
+If you're a recruiter, instructor, or security professional and would like to discuss this work further, feel free to contact me:  
 📩 **zuhair.khan@mail.utoronto.ca**
 
 ---
 
-## ✅ What You'll Find
+## ✅ What You’ll Find
 
-Each challenge folder includes:
+Each challenge directory typically includes:
 
-- `challenge.md` – Summary of the problem setup
-- `writeup.md` – My approach, code snippets, and results
-- `plaintext.txt` / `output.txt` – Input/output samples (when applicable)
-- `solution.py` – Redacted or partial solution code (if safe to share)
+- `challenge.md` – Problem description
+- `writeup.md` – My approach, reflections, and results
+- `plaintext.txt` / `output.txt` – Sample input/output files (when applicable)
+- `solution.py` – Redacted or partial implementation (where appropriate)
+- `run.sh` – Helper script to execute Docker-based solutions
 
 ---
 
 ## 🔐 Repo Access
 
-This is a private repository. If you're reading this, you've likely been given view-only access.
-
-Thank you for respecting the boundaries of academic work. 🙏
+If you're viewing this, you've likely been granted direct access or are reviewing this as part of a job/internship application.  
+Thank you for respecting the boundaries of academic work and cybersecurity ethics. 🙏
