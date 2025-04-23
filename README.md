@@ -38,6 +38,4 @@ Each challenge folder includes:
 
 ## 🔐 Repo Access
 
-This is a private repository. If you're reading this, you've likely been given view-only access.
-
 Thank you for respecting the boundaries of academic work. 🙏
