@@ -9,7 +9,7 @@ These challenges span a wide range of cybersecurity topics:
 - 💻 Reverse engineering and encoding tricks
 - 🌐 Web security, TLS simulation, and attacks
 
-Each challenge folder contains a brief write-up, sample I/O files, redacted code, and test results where appropriate.
+Each challenge folder contains a brief write-up, sample I/O files, redacted code, and test results where appropriate
 
 ---
 
