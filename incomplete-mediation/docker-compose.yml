@@ -1,0 +1,83 @@
+# Incomplete Mediation Vulnerability Testing Environment
+# 
+# This Docker Compose configuration creates a controlled environment for
+# testing incomplete mediation vulnerabilities in web applications.
+# 
+# Components:
+# - Microblog: Vulnerable web application with authorization weaknesses
+# - Mallory: Attacker container with exploitation tools and scripts
+#
+# Educational Purpose: Understanding authorization bypass vulnerabilities
+# and the importance of proper server-side validation.
+
+version: '3.8'
+
+services:
+  # Vulnerable microblog web application
+  microblog:
+    image: thierrysans/microblog:latest
+    container_name: microblog
+    ports:
+      - "8080:80"
+    networks:
+      vulnerable_network:
+        ipv4_address: 10.0.0.2
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+        
+  # Attacker environment with exploitation tools
+  mallory:
+    image: thierrysans/mallory:microblog
+    container_name: mallory
+    tty: true
+    stdin_open: true
+    restart: always
+    volumes:
+      - ./:/shared
+    networks:
+      vulnerable_network:
+        ipv4_address: 10.0.0.4
+    depends_on:
+      - microblog
+    environment:
+      - TARGET_HOST=10.0.0.2
+      - TARGET_PORT=80
+      - PYTHONPATH=/shared
+    working_dir: /shared
+
+networks:
+  vulnerable_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.0.0/24
+          gateway: 10.0.0.1
+
+# Professional Security Testing Notes:
+# 
+# Network Architecture:
+# - Isolated network segment (10.0.0.0/24) for controlled testing
+# - Microblog application accessible on port 8080 from host
+# - Mallory container positioned for direct application access
+# 
+# Security Considerations:
+# - This is a deliberately vulnerable environment for educational purposes
+# - Should only be used in isolated, controlled environments
+# - Not suitable for production or internet-connected systems
+# 
+# Usage Instructions:
+# 1. Deploy environment: docker-compose up -d
+# 2. Access application: http://localhost:8080
+# 3. Execute exploits: docker exec -it mallory python3 exploit.py
+# 4. Clean environment: docker-compose down
+# 
+# Educational Value:
+# - Demonstrates real-world incomplete mediation vulnerabilities
+# - Provides hands-on experience with authorization bypass techniques
+# - Establishes understanding of proper server-side validation requirements
+# - Supports development of comprehensive web application security skills

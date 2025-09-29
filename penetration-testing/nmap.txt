@@ -1,0 +1,28 @@
+root@835f52ea21eb:/# nmap --fuzzy -O -sV -p0-4096 10.0.0.2
+Starting Nmap 7.80 ( https://nmap.org ) at 2024-10-27 23:20 UTC
+Nmap scan report for alice.penetration-testing-starter_channel (10.0.0.2)
+Host is up (0.00019s latency).
+Not shown: 4094 closed ports
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http     Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+1099/tcp open  java-rmi GNU Classpath grmiregistry
+3306/tcp open  mysql    MySQL 5.0.51a-3ubuntu5
+MAC Address: 02:42:0A:00:00:02 (Unknown)
+Aggressive OS guesses: Linux 2.6.32 (96%), Linux 3.2 - 4.9 (96%), Linux 2.6.32 - 3.10 (96%), Linux 3.4 - 3.10 (95%), Linux 3.1 (95%), Linux 3.2 (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Synology DiskStation Manager 5.2-5644 (94%), Netgear RAIDiator 4.2.28 (94%), Linux 2.6.32 - 2.6.35 (94%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=10/27%OT=80%CT=1%CU=31780%PV=Y%DS=1%DC=D%G=Y%M=02420A%
+OS:TM=671ECAD2%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=10C%TI=Z%CI=Z%II=
+OS:I%TS=A)SEQ(SP=100%GCD=1%ISR=10C%TI=Z%CI=Z%TS=A)OPS(O1=M5B4ST11NW7%O2=M5B
+OS:4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5B4ST11)WIN(W
+OS:1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%
+OS:O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=
+OS:N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A
+OS:=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%D
+OS:F=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL
+OS:=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 19.90 seconds

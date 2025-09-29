@@ -1,0 +1,16 @@
+# HTTPS Traffic Analysis
+# Encrypted TLS communication showing binary data
+
+............"..e. ..8&..eQ.`...NvU&V.e..... t.i..eb.Y3.pN.....,.......l'.....v......./.+.0.,...'.g.(.k...................
+].a.W.S...........\`.V.R.$.j.#.@.
+...9.8.	...3.2.......Q.......P.=.<.5./...............https-only.seclab.space.........
+.........................#...........
+.*.(...........	.
+...........................+........-.....3.&.$... .x.S"d.%..7.F...".4...q?a....R.f.).[.&. ...s.....D..;.l...{....?...lb.RZII...10.}....Ay...7.]....|K.Ea#4.Ll..W...>.+.......)y.	
+
+# Security Analysis:
+# - TLS encrypted communication prevents cleartext data extraction
+# - Only metadata visible: server name (https-only.seclab.space) via SNI
+# - Application data protected by symmetric encryption
+# - Demonstrates proper security implementation with HTTPS protocol
+# - Binary data represents encrypted payload and TLS handshake information

@@ -2,7 +2,7 @@
 
 ## 🧠 Challenge Goal
 
-This challenge explores the strengths and weaknesses of various AES block cipher modes by encrypting `.ppm` image files. We experiment with:
+This challenge explores the strengths and weakne- `output.ppm` reveals the hidden word: **[REDACTED]** — the name of AES's original cipher.ses of various AES block cipher modes by encrypting `.ppm` image files. We experiment with:
 
 - **Electronic Codebook (ECB)** – insecure due to identical block output
 - **Cipher Block Chaining (CBC)** – adds randomized chaining with an IV
@@ -56,7 +56,7 @@ This means we don’t need the key at all — we can recover the XOR of the orig
 
 ## 🧨 Exploit Summary
 
-We XOR `secret1.ppm` and `secret2.ppm` using `crack.py`, generating a new image `output.ppm` that visually reveals the flag "rijndael" due to differences between the original plaintexts.
+We XOR `secret1.ppm` and `secret2.ppm` using `crack.py`, generating a new image `output.ppm` that visually reveals the flag due to differences between the original plaintexts.
 
 This attack works **without knowing the key** or decrypting either image individually.
 

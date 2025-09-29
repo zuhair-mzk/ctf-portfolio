@@ -1,0 +1,42 @@
+services:
+  alice:
+    image: thierrysans/metasploitable:penetration-testing
+    container_name: alice
+    tty: true
+    networks:
+      channel:
+        ipv4_address: 10.0.0.2
+
+  nmap:
+      image: thierrysans/nmap:latest
+      container_name: nmap
+      stdin_open: true
+      tty: true
+      networks:
+        channel:
+          ipv4_address: 10.0.0.3
+
+  metasploit:
+    image: strm/metasploit
+    container_name: metasploit
+    stdin_open: true
+    tty: true
+    networks:
+      channel:
+        ipv4_address: 10.0.0.4
+
+  openvas:
+      image: mikesplain/openvas
+      container_name: openvas
+      ports:
+        - "443:443"
+      networks:
+        channel:
+          ipv4_address: 10.0.0.5
+             
+networks:
+  channel:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/24
